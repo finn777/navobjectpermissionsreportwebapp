@@ -24,7 +24,7 @@ public class Servlet extends HttpServlet {
 
         response.setContentType("text/html");
 
-        String varTextA = "(jsp) URL: " + Data.GetConnectionURL() + "<br>";
+        String varTextA = "Github forever... (jsp) URL: " + Data.GetConnectionURL() + "<br>";
         request.setAttribute("textA", varTextA);
 
         Data data = new Data();
