@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<component name="dataSourceStorage">
+  <data-source name="MySQL - as_3c46f80963eb451@eu-cdbr-azure-west-d.cloudapp.net" uuid="5818dff3-ba54-4742-aa7b-a80e9eb67be1">
+    <database-info product="MySQL" version="5.5.45-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="as_3c46f80963eb451"/>
+      <table id="2" parent="1" name="data"/>
+      <column id="3" parent="2" name="DataID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="4" parent="2" name="ModuleName">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="5" parent="2" name="ObjectType">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="6" parent="2" name="Description">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="7" parent="2" name="RangeFrom">
+        <data-type>int(20)</data-type>
+      </column>
+      <column id="8" parent="2" name="RangeTo">
+        <data-type>int(20)</data-type>
+      </column>
+      <column id="9" parent="2" name="Read">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="10" parent="2" name="Insert">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="11" parent="2" name="Modify">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="12" parent="2" name="Delete">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="13" parent="2" name="Execute">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="14" parent="2" name="ProductLine">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="15" parent="2" name="ModuleID">
+        <data-type>int(20)</data-type>
+      </column>
+      <column id="16" parent="2" name="VersionName">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="17" parent="2" name="ModuleID2">
+        <data-type>int(20)</data-type>
+      </column>
+      <key id="18" parent="2" name="PRIMARY">
+        <columns>DataID</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+  <data-source name="MySQL - navobjectpermisionsreportdb@localhost" uuid="cff97ceb-cd02-482e-b6e1-8005d9fe6170">
+    <database-info product="MySQL" version="5.7.11-log" jdbc-version="4.0" driver-name="MySQL Connector Java" driver-version="mysql-connector-java-5.1.35 ( Revision: 5fb9c5849535c13917c2cf9baaece6ef9693ef27 )">
+      <extra-name-characters>#@</extra-name-characters>
+      <identifier-quote-string>`</identifier-quote-string>
+    </database-info>
+    <case-sensitivity plain-identifiers="lower" quoted-identifiers="lower"/>
+    <database-model serializer="dbm" rdbms="MYSQL" format-version="2.5">
+      <schema id="1" name="navobjectpermisionsreportdb"/>
+      <table id="2" parent="1" name="data"/>
+      <column id="3" parent="2" name="DataID">
+        <mandatory>1</mandatory>
+        <data-type>int(11)</data-type>
+      </column>
+      <column id="4" parent="2" name="ModuleName">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="5" parent="2" name="ObjectType">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="6" parent="2" name="Description">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="7" parent="2" name="RangeFrom">
+        <data-type>int(20)</data-type>
+      </column>
+      <column id="8" parent="2" name="RangeTo">
+        <data-type>int(20)</data-type>
+      </column>
+      <column id="9" parent="2" name="Read">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="10" parent="2" name="Insert">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="11" parent="2" name="Modify">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="12" parent="2" name="Delete">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="13" parent="2" name="Execute">
+        <data-type>varchar(10)</data-type>
+      </column>
+      <column id="14" parent="2" name="ProductLine">
+        <data-type>varchar(80)</data-type>
+      </column>
+      <column id="15" parent="2" name="ModuleID">
+        <data-type>int(20)</data-type>
+      </column>
+      <column id="16" parent="2" name="VersionName">
+        <data-type>varchar(20)</data-type>
+      </column>
+      <column id="17" parent="2" name="ModuleID2">
+        <data-type>int(20)</data-type>
+      </column>
+      <key id="18" parent="2" name="PRIMARY">
+        <columns>DataID</columns>
+        <primary>1</primary>
+      </key>
+    </database-model>
+  </data-source>
+</component>
