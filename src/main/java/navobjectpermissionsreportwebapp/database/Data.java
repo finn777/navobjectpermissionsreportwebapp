@@ -1,6 +1,8 @@
 package navobjectpermissionsreportwebapp.database;
 
 import java.sql.*;
+import java.util.ArrayList;
+import java.util.Collection;
 
 public class Data {
     // Local
@@ -17,7 +19,7 @@ public class Data {
         return URL;
     }
 
-    public static String GetData() {
+    public static String GetRowsCount() {
         String s = "empty";
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -27,11 +29,11 @@ public class Data {
         try {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
-            preparedStatement = connection.prepareStatement("select ModuleName FROM data WHERE DataId = ?;");
-            preparedStatement.setInt(1,1);
+            preparedStatement = connection.prepareStatement("select count(*) RowsCount FROM data;");
+            //preparedStatement.setInt(1,1);
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                s = resultSet.getString("ModuleName");
+                s = resultSet.getString("RowsCount");
             }
         }
         catch(SQLException e) {
@@ -50,6 +52,62 @@ public class Data {
 
         return s;
     }
+
+    public Collection getStudentsFromGroup() throws SQLException {
+
+
+        String s = "empty";
+        Connection connection = null;
+        PreparedStatement preparedStatement = null;
+        ResultSet resultSet = null;
+        Collection Rows = new ArrayList();
+
+
+        try {
+            DriverManager.registerDriver(new com.mysql.jdbc.Driver());
+            connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
+            preparedStatement = connection.prepareStatement("select count(*) RowsCount FROM data;");
+            //preparedStatement.setInt(1,1);
+            resultSet = preparedStatement.executeQuery();
+            while (resultSet.next()) {
+                s = resultSet.getString("RowsCount");
+            }
+        }
+        catch(SQLException e) {
+            e.printStackTrace();
+        } finally {
+            if (resultSet != null)
+                try {
+                    if (resultSet != null) resultSet.close();
+                    if (resultSet != null) preparedStatement.close();
+                    if (resultSet != null) connection.close();
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                    System.err.println("Error: " + ex.getMessage());
+                }
+        }
+
+        return Rows;
+
+
+
+        Collection students = new ArrayList();
+        PreparedStatement stmt = con.prepareStatement("SELECT student_id, firstName, patronymic, surName, "
+                + "sex, dateOfBirth, group_id, educationYear FROM students "
+                + "WHERE group_id =  ? AND  educationYear =  ? "
+                + "ORDER BY surName, firstName, patronymic");
+        stmt.setInt(1, group.getGroupId());
+        stmt.setInt(2, year);
+        ResultSet rs = stmt.executeQuery();
+        while (rs.next()) {
+            Student st = new Student(rs);
+            students.add(st);
+        }
+        rs.close();
+        stmt.close();
+        return students;
+    }
+
 }
 
 //Statement statement = connection.createStatement();
@@ -83,7 +141,7 @@ public class Data {
                                 res.getString("ProductLine")+";"+
                                 res.getInt("ModuleID")+";"+
                                 res.getString("VersionName")+";"+
-                                res.getInt("ModuleID")+";"
+                                res.getInt("ModuleID2")+";"
                 );
                 System.out.println();
             }

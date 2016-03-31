@@ -4,7 +4,8 @@
     <title></title>
 </head>
 <body>
-${textA}
-${textB}
+<h3>NAVObjectPermissionsReportWebApp</h3>
+${textURL}
+${textRowsCount}
 </body>
 </html>

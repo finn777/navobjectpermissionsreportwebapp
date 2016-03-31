@@ -24,12 +24,13 @@ public class Servlet extends HttpServlet {
 
         response.setContentType("text/html");
 
-        String varTextA = "Github forever... (jsp) URL: " + Data.GetConnectionURL() + "<br>";
-        request.setAttribute("textA", varTextA);
+        String varTextURL = "URL: " + Data.GetConnectionURL() + "<br>";
+        request.setAttribute("textURL", varTextURL);
 
         Data data = new Data();
-        String varTextB = "(jsp) Data: " + data.GetData() + "<br>";
-        request.setAttribute("textB", varTextB);
+        String varRowsCount = "Rows count: " + data.GetRowsCount() + "<br>";
+        request.setAttribute("textRowsCount", varRowsCount);
+
 
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
