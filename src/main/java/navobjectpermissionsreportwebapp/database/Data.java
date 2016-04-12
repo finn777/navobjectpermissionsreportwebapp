@@ -15,11 +15,11 @@ public class Data {
     //private static final String USERNAME = "b2db65b318d4e7";
     //private static final String PASSWORD = "a2879805";
 
-    public static String GetConnectionURL() {
+    public static String getConnectionURL() {
         return URL;
     }
 
-    public static String GetRowsCount() {
+    public static String getRowsCount() {
         String s = "empty";
         Connection connection = null;
         PreparedStatement preparedStatement = null;
@@ -53,24 +53,33 @@ public class Data {
         return s;
     }
 
-    public Collection getStudentsFromGroup() throws SQLException {
+    public ArrayList<Row> getRows(String objectype, int objectid) {
 
 
         String s = "empty";
         Connection connection = null;
         PreparedStatement preparedStatement = null;
         ResultSet resultSet = null;
-        Collection Rows = new ArrayList();
+        ArrayList<Row> Rows = new ArrayList<Row>();
 
 
         try {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
-            preparedStatement = connection.prepareStatement("select count(*) RowsCount FROM data;");
-            //preparedStatement.setInt(1,1);
+            preparedStatement = connection.prepareStatement
+            (
+             "SELECT * FROM " +
+             "(SELECT DISTINCT `ObjectType`,`ModuleName`,`VersionName`,`Read`,`Insert`,`Modify`,`Delete`,`Execute`,`ProductLine` FROM data " +
+             "WHERE `ObjectType` = ? AND ((? >= `RangeFrom`) AND (? <= `RangeTo`)) ORDER BY DataID) t " +
+             "ORDER BY t.`ModuleName`,t.`ProductLine`;"
+            );
+            preparedStatement.setString(1,objectype);
+            preparedStatement.setInt(2,objectid);
+            preparedStatement.setInt(3,objectid);
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
-                s = resultSet.getString("RowsCount");
+                Row row = new Row(resultSet);
+                Rows.add(row);
             }
         }
         catch(SQLException e) {
@@ -88,24 +97,6 @@ public class Data {
         }
 
         return Rows;
-
-
-
-        Collection students = new ArrayList();
-        PreparedStatement stmt = con.prepareStatement("SELECT student_id, firstName, patronymic, surName, "
-                + "sex, dateOfBirth, group_id, educationYear FROM students "
-                + "WHERE group_id =  ? AND  educationYear =  ? "
-                + "ORDER BY surName, firstName, patronymic");
-        stmt.setInt(1, group.getGroupId());
-        stmt.setInt(2, year);
-        ResultSet rs = stmt.executeQuery();
-        while (rs.next()) {
-            Student st = new Student(rs);
-            students.add(st);
-        }
-        rs.close();
-        stmt.close();
-        return students;
     }
 
 }

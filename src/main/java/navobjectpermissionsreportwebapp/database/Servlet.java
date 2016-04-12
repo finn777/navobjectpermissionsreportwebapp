@@ -8,6 +8,7 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 
 @WebServlet(name = "Servlet", urlPatterns = {"/Servlet","/index.html"})
 public class Servlet extends HttpServlet {
@@ -15,7 +16,7 @@ public class Servlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        super.doPost(request, response);
+        doGet(request, response);
     }
 
     @Override
@@ -24,14 +25,16 @@ public class Servlet extends HttpServlet {
 
         response.setContentType("text/html");
 
-        String varTextURL = "URL: " + Data.GetConnectionURL() + "<br>";
+        String varTextURL = "URL: " + Data.getConnectionURL() + "<br>";
         request.setAttribute("textURL", varTextURL);
 
         Data data = new Data();
-        String varRowsCount = "Rows count: " + data.GetRowsCount() + "<br>";
+        String varRowsCount = "Rows count: " + data.getRowsCount() + "<br>";
         request.setAttribute("textRowsCount", varRowsCount);
 
 
+        ArrayList<Row> rows = data.getRows("TableData",17);
+        request.setAttribute("rows", rows);
         RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
         dispatcher.forward(request, response);
 

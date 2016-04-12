@@ -4,117 +4,97 @@ import java.sql.ResultSet;
 import java.sql.SQLException;
 
 public class Row {
-    private int DataID;
-    private String ObjectType; // Module ID
-    private int ModuleID; // Module ID
-    private String ModuleName; // Module Description
-    private String VersionName; // Country
-    private String Read; // Read
-    private String Insert; // Insert
-    private String Modify; // Modify
-    private String Delete; // Delete
-    private String Execute; // Execute
-    private String ProductLine; // Product Line
+    private String objecttype; // Module ID
+    private String modulename; // Module Description
+    private String versionname; // Country
+    private String read; // Read
+    private String insert; // Insert
+    private String modify; // Modify
+    private String delete; // Delete
+    private String execute; // Execute
+    private String productline; // Product Line
 
     public Row(ResultSet rs) throws SQLException {
-        setDataID(rs.getInt(1));
-        setObjectType(rs.getString(2));
-        setModuleID(rs.getInt(3));
-        setModuleName(rs.getString(4));
-        setVersionName(rs.getString(5));
-        setRead(rs.getString(6));
-        setInsert(rs.getString(7));
-        setModify(rs.getString(8));
-        setDelete(rs.getString(9));
-        setExecute(rs.getString(10));
-        setProductLine(rs.getString(11));
+        setObjecttype(rs.getString(1));
+        setModulename(rs.getString(2));
+        setVersionname(rs.getString(3));
+        setRead(rs.getString(4));
+        setInsert(rs.getString(5));
+        setModify(rs.getString(6));
+        setDelete(rs.getString(7));
+        setExecute(rs.getString(8));
+        setProductline(rs.getString(9));
     }
 
-    public int getDataID() {
-        return DataID;
+    public String getObjecttype() {
+        return objecttype;
     }
 
-    public void setDataID(int dataID) {
-        DataID = dataID;
+    public void setObjecttype(String objecttype) {
+        this.objecttype = objecttype;
     }
 
-    public String getObjectType() {
-        return ObjectType;
+    public String getModulename() {
+        return modulename;
     }
 
-    public void setObjectType(String objectType) {
-        ObjectType = objectType;
+    public void setModulename(String modulename) {
+        this.modulename = modulename;
     }
 
-    public int getModuleID() {
-        return ModuleID;
+    public String getVersionname() {
+        return versionname;
     }
 
-    public void setModuleID(int moduleID) {
-        ModuleID = moduleID;
-    }
-
-    public String getModuleName() {
-        return ModuleName;
-    }
-
-    public void setModuleName(String moduleName) {
-        ModuleName = moduleName;
-    }
-
-    public String getVersionName() {
-        return VersionName;
-    }
-
-    public void setVersionName(String versionName) {
-        VersionName = versionName;
+    public void setVersionname(String versionname) {
+        this.versionname = versionname;
     }
 
     public String getRead() {
-        return Read;
+        return read;
     }
 
     public void setRead(String read) {
-        Read = read;
+        this.read = read;
     }
 
     public String getInsert() {
-        return Insert;
+        return insert;
     }
 
     public void setInsert(String insert) {
-        Insert = insert;
+        this.insert = insert;
     }
 
     public String getModify() {
-        return Modify;
+        return modify;
     }
 
     public void setModify(String modify) {
-        Modify = modify;
+        this.modify = modify;
     }
 
     public String getDelete() {
-        return Delete;
+        return delete;
     }
 
     public void setDelete(String delete) {
-        Delete = delete;
+        this.delete = delete;
     }
 
     public String getExecute() {
-        return Execute;
+        return execute;
     }
 
     public void setExecute(String execute) {
-        Execute = execute;
+        this.execute = execute;
     }
 
-    public String getProductLine() {
-        return ProductLine;
+    public String getProductline() {
+        return productline;
     }
 
-    public void setProductLine(String productLine) {
-        ProductLine = productLine;
+    public void setProductline(String productLine) {
+        this.productline = productLine;
     }
 }
