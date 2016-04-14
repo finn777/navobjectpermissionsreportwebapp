@@ -12,11 +12,24 @@ import java.util.ArrayList;
 
 @WebServlet(name = "Servlet", urlPatterns = {"/Servlet","/index.html"})
 public class Servlet extends HttpServlet {
+    private String varTextURL;
+    private String varRowsCount;
+    private Data data;
+    private Filter filter;
 
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        doGet(request, response);
+
+        response.setContentType("text/html");
+
+        filter.setFilterobjectid(Integer.parseInt(request.getParameter("filterobjectid")));
+        request.getSession().setAttribute("filter", filter);
+
+        ArrayList<Row> rows = data.getRows("TableData",filter.getFilterobjectid());
+        request.getSession().setAttribute("rows", rows);
+
+        getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
     }
 
     @Override
@@ -25,44 +38,23 @@ public class Servlet extends HttpServlet {
 
         response.setContentType("text/html");
 
-        String varTextURL = "URL: " + Data.getConnectionURL() + "<br>";
-        request.setAttribute("textURL", varTextURL);
 
-        Data data = new Data();
-        String varRowsCount = "Rows count: " + data.getRowsCount() + "<br>";
-        request.setAttribute("textRowsCount", varRowsCount);
+        varTextURL = "URL: " + Data.getConnectionURL() + "<br>";
+        request.getSession().setAttribute("textURL", varTextURL);
 
+        data = new Data();
+        varRowsCount = "Rows count: " + data.getRowsCount() + "<br>";
+        request.getSession().setAttribute("textRowsCount", varRowsCount);
 
-        ArrayList<Row> rows = data.getRows("TableData",17);
-        request.setAttribute("rows", rows);
-        RequestDispatcher dispatcher = request.getRequestDispatcher("/index.jsp");
-        dispatcher.forward(request, response);
+        filter = new Filter();
+
+        request.getSession().setAttribute("rows", null);
+
+        getServletContext().getRequestDispatcher("/index.jsp").forward(request, response);
 
     }
 
 }
 
-/*
-
-        response.setContentType("text/html");
-        PrintWriter out = response.getWriter();
-
-        out.println("<html>");
-        out.println("<body>");
-        out.println("<head>");
-        out.println("<title>navobjectpermissionsreportwebapp</title>");
-        out.println("</head>");
-        out.println("<body>");
-        out.println("<h3>navobjectpermissionsreportwebapp</h3>");
-        out.println("<h4>Information</h4>");
-        out.println("URL: " + Data.GetConnectionURL()+"<br>");
-        Data data = new Data();
-        out.println("Data: " + data.GetData()+"<br>");
-        out.println("</body>");
-        out.println("</html>");
-
-        out.close();
-
-*/
 
 

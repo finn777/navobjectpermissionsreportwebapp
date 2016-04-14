@@ -101,40 +101,4 @@ public class Data {
 
 }
 
-//Statement statement = connection.createStatement();
-//statement.execute();
-//statement.executeUpdate();
-//ResultSet res = statement.executeQuery("select * FROM data LIMIT 20;");
-//statement.addBatch();
-//statement.executeBatch();
-//statement.clearBatch();
-//statement.isClosed();
-//statement.getConnection();
-//statement.close();
-//connection.close();
-//System.out.println(statement.isClosed());
-            /*
-            ResultSet res = statement.executeQuery("select * FROM data LIMIT 20;");
-            while (res.next()) {
-                System.out.print(
-                        res.getInt("DataID")+";"+
-                                res.getString("ModuleName")+";"+
-                                res.getString("ObjectType")+";"+
-                                res.getString("Description")+";"+
-                                res.getString("ObjectType")+";"+
-                                res.getInt("RangeFrom")+";"+
-                                res.getInt("RangeTo")+";"+
-                                res.getString("Read")+";"+
-                                res.getString("Insert")+";"+
-                                res.getString("Modify")+";"+
-                                res.getString("Delete")+";"+
-                                res.getString("Execute")+";"+
-                                res.getString("ProductLine")+";"+
-                                res.getInt("ModuleID")+";"+
-                                res.getString("VersionName")+";"+
-                                res.getInt("ModuleID2")+";"
-                );
-                System.out.println();
-            }
-            */
 
