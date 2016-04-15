@@ -20,6 +20,15 @@ ${textRowsCount}
     </table>
 </form>
 
+<form action="<c:url value="/"/>" method="GET">
+    <table>
+        <tr>
+            <td><input type="submit" name="clear" value="Clear"/></td>
+        </tr>
+    </table>
+</form>
+
+
 <p/>
 <table border = "1">
     <tr>
