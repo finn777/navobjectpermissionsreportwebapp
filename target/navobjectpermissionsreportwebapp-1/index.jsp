@@ -15,10 +15,12 @@ ${textRowsCount}
         <tr>
             <td>Object Type: <input type="text" name="filterobjecttype" value="${filter.filterobjecttype}"/><br/></td>
             <td>Object ID  : <input type="text" name="filterobjectid"  value="${filter.filterobjectid}"/><br/></td>
-            <td><input type="submit" name="search" value="Search"/></td>
+            <td><input type="submit" name="Search" value="Search"/><br/></td>
+            <td><input type="submit" name="Clear" value="Clear"/><br/></td>
         </tr>
     </table>
 </form>
+
 
 <p/>
 <table border = "1">
