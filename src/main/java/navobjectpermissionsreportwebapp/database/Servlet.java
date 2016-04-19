@@ -23,10 +23,16 @@ public class Servlet extends HttpServlet {
 
         if (request.getParameter("Clear") == null) {
 
-            filter.setFilterobjectid(Integer.parseInt(request.getParameter("filterobjectid")));
+            filter.setFilterobjecttype(request.getParameter("filterobjecttype"));
+            try {
+                filter.setFilterobjectid(Integer.parseInt(request.getParameter("filterobjectid")));
+            } catch (NumberFormatException e) {
+                filter.setFilterobjectid(-1);
+            }
+
             request.getSession().setAttribute("filter", filter);
 
-            ArrayList<Row> rows = data.getRows("TableData", filter.getFilterobjectid());
+            ArrayList<Row> rows = data.getRows(filter.getFilterobjecttype(), filter.getFilterobjectid());
             request.getSession().setAttribute("rows", rows);
 
         } else {
@@ -39,6 +45,9 @@ public class Servlet extends HttpServlet {
 
             varRowsCount = "Rows count: " + data.getRowsCount() + "<br>";
             request.getSession().setAttribute("textRowsCount", varRowsCount);
+
+            ArrayList<String> types = data.getTypes();
+            request.getSession().setAttribute("types", types);
 
             request.getSession().setAttribute("filter", null);
             request.getSession().setAttribute("rows", null);
@@ -61,6 +70,9 @@ public class Servlet extends HttpServlet {
 
         varRowsCount = "Rows count: " + data.getRowsCount() + "<br>";
         request.getSession().setAttribute("textRowsCount", varRowsCount);
+
+        ArrayList<String> types = data.getTypes();
+        request.getSession().setAttribute("types", types);
 
         request.getSession().setAttribute("filter", null);
         request.getSession().setAttribute("rows", null);

@@ -98,6 +98,21 @@ public class Data {
 
         return Rows;
     }
+    public ArrayList<String> getTypes() {
+        ArrayList<String> Types = new ArrayList<String>();
+
+        Types.add("TableData");
+        Types.add("TableDescription");
+        Types.add("Form");
+        Types.add("Report");
+        Types.add("Dataport");
+        Types.add("XMLport");
+        Types.add("Codeunit");
+        Types.add("MenuSuite");
+        Types.add("Page");
+
+        return Types;
+    }
 
 }
 

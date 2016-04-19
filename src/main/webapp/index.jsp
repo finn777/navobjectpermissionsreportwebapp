@@ -13,8 +13,14 @@ ${textRowsCount}
 <form action="<c:url value="/"/>" method="POST">
     <table>
         <tr>
-            <td>Object Type: <input type="text" name="filterobjecttype" value="${filter.filterobjecttype}"/><br/></td>
-            <td>Object ID  : <input type="text" name="filterobjectid"  value="${filter.filterobjectid}"/><br/></td>
+            <td>Object Type:
+                <select name="filterobjecttype" value = "${filter.filterobjecttype}">
+                    <c:forEach var="type" items="${types}">
+                    <option value="${type}" ${filter.filterobjecttype == type ? 'selected' : ' '}><c:out value="${type}" ></c:out></option>
+                    </c:forEach>
+                </select>
+            </td>
+            <td>Object ID  : <input type="text" pattern="^[0-9]+$" name="filterobjectid" value="${filter.filterobjectid}"/><br/></td>
             <td><input type="submit" name="Search" value="Search"/><br/></td>
             <td><input type="submit" name="Clear" value="Clear"/><br/></td>
         </tr>
