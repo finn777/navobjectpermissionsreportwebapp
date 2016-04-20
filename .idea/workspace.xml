@@ -2,18 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1a7228eb-5b9f-43ce-a27f-bfa03fabfd72" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/navobjectpermissionsreportwebapp/database/Data.class" afterPath="$PROJECT_DIR$/target/classes/navobjectpermissionsreportwebapp/database/Data.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/navobjectpermissionsreportwebapp/database/Main.class" afterPath="$PROJECT_DIR$/target/classes/navobjectpermissionsreportwebapp/database/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/navobjectpermissionsreportwebapp/database/Servlet.class" afterPath="$PROJECT_DIR$/target/classes/navobjectpermissionsreportwebapp/database/Servlet.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/navobjectpermissionsreportwebapp-1.war" afterPath="$PROJECT_DIR$/target/navobjectpermissionsreportwebapp-1.war" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/navobjectpermissionsreportwebapp-1/WEB-INF/classes/navobjectpermissionsreportwebapp/database/Data.class" afterPath="$PROJECT_DIR$/target/navobjectpermissionsreportwebapp-1/WEB-INF/classes/navobjectpermissionsreportwebapp/database/Data.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/navobjectpermissionsreportwebapp-1/WEB-INF/classes/navobjectpermissionsreportwebapp/database/Main.class" afterPath="$PROJECT_DIR$/target/navobjectpermissionsreportwebapp-1/WEB-INF/classes/navobjectpermissionsreportwebapp/database/Main.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/navobjectpermissionsreportwebapp-1/WEB-INF/classes/navobjectpermissionsreportwebapp/database/Servlet.class" afterPath="$PROJECT_DIR$/target/navobjectpermissionsreportwebapp-1/WEB-INF/classes/navobjectpermissionsreportwebapp/database/Servlet.class" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/readme.txt" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/Blog post about navobjectpermissionsreportwebapp.docx" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Data.java" afterPath="$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Data.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Main.java" afterPath="$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Main.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Servlet.java" afterPath="$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Servlet.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/maven-archiver/pom.properties" afterPath="$PROJECT_DIR$/target/maven-archiver/pom.properties" />
     </list>
     <ignored path="navobjectpermisionsreportwebapp.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -98,14 +89,24 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Servlet.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Servlet.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Servlet.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.23692308">
+            <state vertical-scroll-proportion="0.0">
               <caret line="43" column="60" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="readme.txt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/readme.txt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.045128204">
+              <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+              <folding />
             </state>
           </provider>
         </entry>
@@ -210,6 +211,7 @@
         <option value="$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Data.java" />
         <option value="$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Main.java" />
         <option value="$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Servlet.java" />
+        <option value="$PROJECT_DIR$/readme.txt" />
       </list>
     </option>
   </component>
@@ -296,8 +298,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="Scratches" />
+      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -332,7 +333,8 @@
           </PATH>
         </subPane>
       </pane>
-      <pane id="PackagesPane" />
+      <pane id="Scratches" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -1135,12 +1137,13 @@
       <workItem from="1461061506036" duration="98000" />
       <workItem from="1461064742405" duration="2460000" />
       <workItem from="1461131787018" duration="1949000" />
-      <workItem from="1461144818652" duration="206000" />
+      <workItem from="1461144818652" duration="1363000" />
+      <workItem from="1461146455393" duration="249000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="135960000" />
+    <option name="totallyTimeSpent" value="137366000" />
   </component>
   <component name="TodoView">
     <todo-panel id="selected-file">
@@ -1212,16 +1215,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Servlet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0">
-          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Main.java">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0">
@@ -1619,11 +1612,19 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/navobjectpermissionsreportwebapp/database/Servlet.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.23692308">
+        <state vertical-scroll-proportion="0.0">
           <caret line="43" column="60" selection-start-line="43" selection-start-column="60" selection-end-line="43" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/readme.txt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.045128204">
+          <caret line="2" column="3" selection-start-line="2" selection-start-column="3" selection-end-line="2" selection-end-column="3" />
+          <folding />
         </state>
       </provider>
     </entry>

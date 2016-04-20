@@ -1,0 +1,3 @@
+Blog post about navobjectpermissionsreportwebapp
+http://linuxloves.ru
+...
