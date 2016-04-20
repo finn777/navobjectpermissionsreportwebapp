@@ -1,16 +1,13 @@
 package navobjectpermissionsreportwebapp.database;
 
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class Main {
 
 
     public static void main(String[] args) {
-        //System.out.println(Data.GetConnectionURL());
         System.out.println("URL: " + Data.getConnectionURL());
         Data data = new Data();
-        //System.out.println(data.GetData());
         System.out.println("Rows count: " + data.getRowsCount());
         System.out.println("");
         ArrayList<String> types = data.getTypes();
@@ -31,9 +28,6 @@ public class Main {
             System.out.print(rows.get(i).getProductline()+";");
             System.out.println();
         }
-
-
-
     }
 }
 

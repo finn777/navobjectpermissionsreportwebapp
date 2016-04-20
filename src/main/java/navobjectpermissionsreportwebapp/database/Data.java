@@ -2,7 +2,6 @@ package navobjectpermissionsreportwebapp.database;
 
 import java.sql.*;
 import java.util.ArrayList;
-import java.util.Collection;
 
 public class Data {
     // Local
@@ -36,17 +35,19 @@ public class Data {
                 s = resultSet.getString("RowsCount");
             }
         }
-        catch(SQLException e) {
-            e.printStackTrace();
-        } finally {
+        catch(SQLException ex1) {
+            ex1.printStackTrace();
+            System.err.println("!Error: " + ex1.getMessage());
+        }
+        finally {
             if (resultSet != null)
             try {
                 if (resultSet != null) resultSet.close();
                 if (resultSet != null) preparedStatement.close();
                 if (resultSet != null) connection.close();
-            } catch (SQLException ex) {
-                ex.printStackTrace();
-                System.err.println("Error: " + ex.getMessage());
+            } catch (SQLException ex2) {
+                ex2.printStackTrace();
+                System.err.println("!Error: " + ex2.getMessage());
             }
         }
 
@@ -82,17 +83,19 @@ public class Data {
                 Rows.add(row);
             }
         }
-        catch(SQLException e) {
-            e.printStackTrace();
+        catch(SQLException ex1) {
+
+            ex1.printStackTrace();
+            System.err.println("!Error: " + ex1.getMessage());
         } finally {
             if (resultSet != null)
                 try {
                     if (resultSet != null) resultSet.close();
                     if (resultSet != null) preparedStatement.close();
                     if (resultSet != null) connection.close();
-                } catch (SQLException ex) {
-                    ex.printStackTrace();
-                    System.err.println("Error: " + ex.getMessage());
+                } catch (SQLException ex2) {
+                    ex2.printStackTrace();
+                    System.err.println("!Error: " + ex2.getMessage());
                 }
         }
 

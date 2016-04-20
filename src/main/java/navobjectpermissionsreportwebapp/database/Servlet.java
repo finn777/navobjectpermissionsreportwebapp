@@ -40,15 +40,6 @@ public class Servlet extends HttpServlet {
             filter = new Filter();
             data = new Data();
 
-            varTextURL = "URL: " + Data.getConnectionURL() + "<br>";
-            request.getSession().setAttribute("textURL", varTextURL);
-
-            varRowsCount = "Rows count: " + data.getRowsCount() + "<br>";
-            request.getSession().setAttribute("textRowsCount", varRowsCount);
-
-            ArrayList<String> types = data.getTypes();
-            request.getSession().setAttribute("types", types);
-
             request.getSession().setAttribute("filter", null);
             request.getSession().setAttribute("rows", null);
 
