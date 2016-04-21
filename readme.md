@@ -1,4 +1,4 @@
-# Blog post about NAVObjectPermissionsReportWebApp 
+# NAVObjectPermissionsReportWebApp
 
 - https://github.com/finn777/navobjectpermissionsreportwebapp
 
@@ -15,8 +15,11 @@
 - http://htmlbook.ru/
 
 ### Azure и Open Sources:
+- https://azure.microsoft.com
 - http://linuxloves.ru
+- https://azure.microsoft.com/ru-ru/documentation/articles/virtual-machines-linux-opensource-links/
+- https://azure.microsoft.com/en-us/documentation/articles/virtual-machines-linux-opensource-links/
 - https://channel9.msdn.com/Series/Open-Source-Database-on-Microsoft-Azure/01
 - https://www.microsoft.com/en-us/Openness
-- https://portal.azure.com/ // новый интерфейс
-- https://manage.windowsazure.com // старый интерфейс
+- https://portal.azure.com/ // новомодный интерфейс
+- https://manage.windowsazure.com // классический интерфейс
