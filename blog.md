@@ -1,6 +1,6 @@
 ### NAVObjectPermissionsReportWebApp. О чудный, дивный мир…
 
-https://blogs.technet.microsoft.com/alexef/2016/04/21/navobjectpermissionsreportwebapp-о-чудный-дивный-мир/
+https://blogs.technet.microsoft.com/alexef/2016/04/22/navobjectpermissionsreportwebapp/
 
 >Хочу вернутся к старой теме разбивке объектов по гранулам.
 
