@@ -10,6 +10,9 @@
 <h3>NAVObjectPermissionsReportWebApp</h3>
 ${textURL}
 ${textRowsCount}
+<h7>Github: https://github.com/finn777/navobjectpermissionsreportwebapp/</h7><br/>
+<h7>Java (.jsp) + Tomcat (on Azure) + MySQL (on Azure)</h7><br/>
+<h7>----</h7>
 <form action="<c:url value="/"/>" method="POST">
     <table>
         <tr>

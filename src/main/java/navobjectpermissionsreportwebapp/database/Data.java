@@ -29,7 +29,6 @@ public class Data {
             DriverManager.registerDriver(new com.mysql.jdbc.Driver());
             connection = DriverManager.getConnection(URL,USERNAME,PASSWORD);
             preparedStatement = connection.prepareStatement("select count(*) RowsCount FROM data;");
-            //preparedStatement.setInt(1,1);
             resultSet = preparedStatement.executeQuery();
             while (resultSet.next()) {
                 s = resultSet.getString("RowsCount");
@@ -42,9 +41,9 @@ public class Data {
         finally {
             if (resultSet != null)
             try {
-                if (resultSet != null) resultSet.close();
-                if (resultSet != null) preparedStatement.close();
-                if (resultSet != null) connection.close();
+                resultSet.close();
+                preparedStatement.close();
+                connection.close();
             } catch (SQLException ex2) {
                 ex2.printStackTrace();
                 System.err.println("!Error: " + ex2.getMessage());
@@ -90,9 +89,9 @@ public class Data {
         } finally {
             if (resultSet != null)
                 try {
-                    if (resultSet != null) resultSet.close();
-                    if (resultSet != null) preparedStatement.close();
-                    if (resultSet != null) connection.close();
+                    resultSet.close();
+                    preparedStatement.close();
+                    connection.close();
                 } catch (SQLException ex2) {
                     ex2.printStackTrace();
                     System.err.println("!Error: " + ex2.getMessage());
