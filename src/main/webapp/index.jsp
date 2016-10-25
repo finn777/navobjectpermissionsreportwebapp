@@ -3,7 +3,7 @@
 
 <html>
 <head>
-    <title>index</title>
+    <title>NAVObjectPermissionsReportWebApp</title>
 </head>
 <body>
 
