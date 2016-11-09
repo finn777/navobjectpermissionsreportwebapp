@@ -17,9 +17,9 @@ CREATE TABLE `data` (
   `ProductLine` varchar(80) DEFAULT NULL,
   `ModuleID` int(20) DEFAULT NULL,
   `VersionName` varchar(20) DEFAULT NULL,
-  `ModuleID2` int(20) DEFAULT NULL,
   PRIMARY KEY (`DataID`)
-) ENGINE=InnoDB AUTO_INCREMENT=649631 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=45050 DEFAULT CHARSET=utf8;
+
 
 TRUNCATE TABLE navobjectpermissionsreportdb.data;
 
@@ -27,7 +27,7 @@ LOAD DATA LOCAL INFILE 'C:\\Users\\alexef\\IdeaProjects\\ObjectPermissionsextern
 FIELDS TERMINATED BY ';'
 LINES TERMINATED BY '\r\n'
 IGNORE 1 LINES
-(`ModuleName`,`ObjectType`,`Description`,`RangeFrom`,`RangeTo`,`Read`,`Insert`,`Modify`,`Delete`,`Execute`,`ProductLine`,`ModuleID`,`VersionName`,`ModuleID2`);
+(`ModuleName`,`ObjectType`,`Description`,`RangeFrom`,`RangeTo`,`Read`,`Insert`,`Modify`,`Delete`,`Execute`,`ProductLine`,`ModuleID`,`VersionName`);
 
 
 Database=as_3c46f80963eb451;Data Source=eu-cdbr-azure-west-d.cloudapp.net;User Id=b2db65b318d4e7;Password=a2879805

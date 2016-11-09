@@ -5,14 +5,14 @@ import java.util.ArrayList;
 
 public class Data {
     // Local
-    //private static final String URL = "jdbc:mysql://localhost:3306/navobjectpermissionsreportdb?useSSL=false";
-    //private static final String USERNAME = "finn777";
-    //private static final String PASSWORD = "mysql";
+    private static final String URL = "jdbc:mysql://localhost:3306/navobjectpermissionsreportdb?useSSL=false";
+    private static final String USERNAME = "finn777";
+    private static final String PASSWORD = "mysql";
 
     // Remote
-    private static final String URL = "jdbc:mysql://eu-cdbr-azure-west-d.cloudapp.net:3306/as_3c46f80963eb451?useSSL=false";
-    private static final String USERNAME = "b2db65b318d4e7";
-    private static final String PASSWORD = "a2879805";
+    //private static final String URL = "jdbc:mysql://eu-cdbr-azure-west-d.cloudapp.net:3306/as_3c46f80963eb451?useSSL=false";
+    //private static final String USERNAME = "b2db65b318d4e7";
+    //private static final String PASSWORD = "a2879805";
 
     public static String getConnectionURL() {
         return URL;
@@ -69,7 +69,7 @@ public class Data {
             preparedStatement = connection.prepareStatement
             (
              "SELECT * FROM " +
-             "(SELECT DISTINCT `ObjectType`,`ModuleName`,`VersionName`,`Read`,`Insert`,`Modify`,`Delete`,`Execute`,`ProductLine` FROM data " +
+             "(SELECT `ObjectType`,`ModuleName`,`VersionName`,`Read`,`Insert`,`Modify`,`Delete`,`Execute`,`ProductLine` FROM data " +
              "WHERE `ObjectType` = ? AND ((? >= `RangeFrom`) AND (? <= `RangeTo`)) ORDER BY DataID) t " +
              "ORDER BY t.`ModuleName`,t.`ProductLine`;"
             );
