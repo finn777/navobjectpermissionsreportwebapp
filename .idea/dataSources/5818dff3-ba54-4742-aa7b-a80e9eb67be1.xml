@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<dataSource name="MySQL - as_3c46f80963eb451@eu-cdbr-azure-west-d.cloudapp.net">
+  <database-model serializer="dbm" rdbms="MYSQL" format-version="4.0">
+    <root id="1"/>
+    <schema id="2" parent="1" name="as_3c46f80963eb451">
+      <Visible>1</Visible>
+    </schema>
+    <table id="3" parent="2" name="data"/>
+    <column id="4" parent="3" name="DataID">
+      <DataType>int(11)|0</DataType>
+      <NotNull>1</NotNull>
+    </column>
+    <column id="5" parent="3" name="ModuleName">
+      <DataType>varchar(80)|0</DataType>
+    </column>
+    <column id="6" parent="3" name="ObjectType">
+      <DataType>varchar(80)|0</DataType>
+    </column>
+    <column id="7" parent="3" name="Description">
+      <DataType>varchar(80)|0</DataType>
+    </column>
+    <column id="8" parent="3" name="RangeFrom">
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="9" parent="3" name="RangeTo">
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="10" parent="3" name="Read">
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="11" parent="3" name="Insert">
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="12" parent="3" name="Modify">
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="13" parent="3" name="Delete">
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="14" parent="3" name="Execute">
+      <DataType>varchar(10)|0</DataType>
+    </column>
+    <column id="15" parent="3" name="ProductLine">
+      <DataType>varchar(80)|0</DataType>
+    </column>
+    <column id="16" parent="3" name="ModuleID">
+      <DataType>int(20)|0</DataType>
+    </column>
+    <column id="17" parent="3" name="VersionName">
+      <DataType>varchar(20)|0</DataType>
+    </column>
+    <column id="18" parent="3" name="ModuleID2">
+      <DataType>int(20)|0</DataType>
+    </column>
+    <key id="19" parent="3" name="PRIMARY">
+      <ColNames>DataID</ColNames>
+      <Primary>1</Primary>
+    </key>
+  </database-model>
+</dataSource>
