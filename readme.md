@@ -3,6 +3,7 @@
 - https://github.com/finn777/navobjectpermissionsreportwebapp
 
 > Java (.jsp) + Tomcat (on Azure) + MySQL (on Azure)
+
 > Blog (Russian): https://blogs.technet.microsoft.com/alexef/2016/04/22/navobjectpermissionsreportwebapp/
 
 ### Java и Web:
